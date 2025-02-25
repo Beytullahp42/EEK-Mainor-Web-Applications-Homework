@@ -16,4 +16,5 @@ class PositiveTest {
         assertEquals(List.of(1), Positives.analyze(List.of(-1, 0, 1)));
         assertEquals(new ArrayList<>(), Positives.analyze(List.of(-1, -2, -3)));
     }
+
 }
