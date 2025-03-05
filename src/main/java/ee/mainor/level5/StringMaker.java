@@ -10,6 +10,9 @@ public class StringMaker {
      */
     public static String make(String s, int x) {
         String chars = "";
+        for (int i = 0; i < x; i++) {
+            chars += s;
+        }
         return chars;
     }
 
@@ -17,7 +20,8 @@ public class StringMaker {
      * Gives you a text containing of x times of string c plus y times of string c.
      */
     public static String make(String s1, int x1, String s2, int x2) {
-        String chars = "";
+        String chars = make(s1, x1);
+        chars += make(s2, x2);
         return chars;
     }
 }
