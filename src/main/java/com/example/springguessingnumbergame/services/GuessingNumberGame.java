@@ -22,7 +22,7 @@ public class GuessingNumberGame {
         }
         attempts.put(id, attempts.get(id) + 1);
         if (game.get(id) == number) {
-            return "Congratulations! You guessed the number in " + attempts.get(id) + " attempts";
+            return "Congratulations! You guessed the number in " + attempts.get(id) + " attempts.";
         } else if (game.get(id) < number) {
             return "Try smaller number";
         } else {
