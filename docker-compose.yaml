@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  spring-app:
+    build: .
+    container_name: beytullahp-spring-app
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-db:5432/beytullahpdatabase
+      - SPRING_DATASOURCE_USERNAME=beytullahp
+      - SPRING_DATASOURCE_PASSWORD=beytullahpassword
+      - SPRING_APPLICATION_NAME=SpringGuessingNumberGame
+    depends_on:
+      - postgres-db
+
+  postgres-db:
+    image: postgres:15
+    container_name: beytullahp-postgres
+    environment:
+      POSTGRES_USER: beytullahp
+      POSTGRES_PASSWORD: beytullahpassword
+      POSTGRES_DB: beytullahpdatabase
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+#      - ./dump.sql:/docker-entrypoint-initdb.d/dump.sql
+
+volumes:
+  postgres-data:
