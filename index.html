@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cookie Clicker</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="node_modules/toastify-js/src/toastify.css">
+    <style>
+        img:hover {
+            transform: scale(1.1);
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+
+        img:active {
+            transform: scale(0.9);
+        }
+
+        img {
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-warning-subtle">
+<div class="text-center">
+    <h1>Cookie Clicker</h1>
+</div>
+<div class="row">
+    <div class="col text-center">
+        <img src="cookie.png" alt="Cookie" class="w-25" id="cookie"/>
+    </div>
+    <div class="col d-flex justify-content-center align-items-center">
+        <div class="text-center">
+            <h2>Click the cookie!</h2>
+            <h2 id="cookie-count">0</h2>
+        </div>
+    </div>
+</div>
+</body>
+<script src="script.js"></script>
+<script src="node_modules/toastify-js/src/toastify.js"></script>
+</html>
