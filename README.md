@@ -15,3 +15,6 @@ This repository contains the assignment submissions for the **SE-016 Web Applica
   
   - **Persistence layer** using **PostgreSQL**.
   - **Docker** integration to containerize the app and manage its services.
+
+### cookie_clicker
+- This branch contains a cookie clicker game built with HTML, Bootstrap and Javascript.
